@@ -13,11 +13,20 @@ public class HelloWorld {
         float myNumber = 3.14f;
         System.out.println(myNumber);
 
-        int x = 10;
-        int y = 2;
-        System.out.println(x / y);
-        System.out.println(y - x);
+//        int x = 4;
+//        x += 5;
 
+//        int x = 3;
+//        int y = 4;
+//        y *= x;
+
+//        int x = 10;
+//        int y = 2;
+//        x /= y;
+//        y -= x;
+
+        int bigNum = Integer.MAX_VALUE;
+        System.out.println(++bigNum);
 
     }
 }
