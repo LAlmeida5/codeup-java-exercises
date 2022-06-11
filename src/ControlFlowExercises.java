@@ -58,25 +58,23 @@ public class ControlFlowExercises {
         int userInputInt = scan.nextInt();
 
         final int NMAX = 3;
-        final double XMAX = userInputInt;
+        final long XMAX = userInputInt;
         String number = "Number";
         String squared = "Squared";
         String cubed = "Cubed";
 
-
-
-        for (int n = 1; n <= 1; n++){
-            System.out.printf("%10s, %9s, %9s", number, squared, cubed);
+        for (long n = 1; n <= 1; n++){
+            System.out.printf("%10s | %9s | %9s |", number, squared, cubed);
         }
         System.out.println();
-        for (int n =1; n <= NMAX; n++){
-            System.out.printf("%10s", "----");
+        for (long n =1; n <= NMAX; n++){
+            System.out.printf("%10s |", "----------");
         }
         System.out.println();
 
-        for (double x = 1; x <= XMAX; x++){
+        for (long x = 1; x <= XMAX; x++){
             for(int n = 1; n <= NMAX; n++){
-                System.out.printf("%10.0f", Math.pow(x, n));
+                System.out.printf("%-10.0f |", Math.pow(x, n));
             }
             System.out.println();
         }
