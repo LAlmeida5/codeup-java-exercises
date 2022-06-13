@@ -95,17 +95,18 @@ public class ControlFlowExercises {
                 System.out.println("B");
             }else if (userGradeIn > 89 && userGradeIn <= 100){
                 System.out.println("A");
-            }else {
+            }
                 System.out.println("Do you want to enter another grade? (Y/N)");
+                String userInput = scan.next();
+                if(userInput.equalsIgnoreCase("n")){
+                    decision = false;
+                    System.out.println("See you later!");
+                }
 
             }
 
         }
 
-            }
-
-
-
-
     }
+
 
