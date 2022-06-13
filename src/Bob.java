@@ -10,7 +10,6 @@ public class Bob {
         System.out.println("Let's talk to cpu Bob!");
         String userInput = scan.nextLine();
 
-
             if (userInput.endsWith("?")) {
                 System.out.println("Sure.");
             } else if (userInput.endsWith("!")) {
