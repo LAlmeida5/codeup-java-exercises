@@ -2,13 +2,13 @@ public class MethodsExercises {
     public static int addition(int num1, int num2){
         return num1 + num2;
     }
-    public static int subtraction(int num1, int num2){
+    public static double subtraction(double num1, double num2){
         return num1 - num2;
     }
-    public static int multiplication(int num1, int num2){
+    public static long multiplication(long num1, long num2){
         return num1 * num2;
     }
-    public static int division(int num1, int num2){
+    public static double division(double num1, double num2){
         return num1 / num2;
     }
     public static int modulus(int dividend, int divisor){
@@ -23,6 +23,7 @@ public class MethodsExercises {
             return 0;
     }
 
+
     public static void main(String[] args) {
         System.out.println(multiplication(10,10));
         System.out.println(addition(33,33));
@@ -30,8 +31,8 @@ public class MethodsExercises {
         System.out.println(subtraction(253,135));
         System.out.println(modulus(10, 3));
 
-        int x = 15, y = 5;
-        System.out.println(recursion(x, y ));
+
+        System.out.println(recursion(20, 5 ));
 
     }
 }
