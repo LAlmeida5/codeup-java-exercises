@@ -11,27 +11,27 @@ public class ControlFlowExercises {
 //        }
 //
 //        // b.Do While
-//        int w = -2;
+//        int w = 0;
 //        do {
-//            w = w + 2 ;
 //            System.out.println(w);
+//            w += 2 ;
 //        }
-//        while (w <= 98);
+//        while (w <= 100);
 //
 //        int y = 100;
 //        do {
 //            System.out.println(y);
-//            y = y - 5;
+//            y -= 5;
 //        }
 //        while (y >= -10);
 //
 //        long z = 2;
 //        do {
 //            System.out.println(z);
-//           z = z * z;
+//            z *= z;
 //        }
 //        while(z <= 1000000);
-//
+
 //        //c.For
 //
 //        for(int a = 100; a >= -10; a = a - 5) {
@@ -52,7 +52,6 @@ public class ControlFlowExercises {
 //        }
 
     //Table of Powers
-        //incomplete...finish this before monday
         Scanner scan = new Scanner(System.in);
         System.out.println("What number would you like to go to?");
         int userInputInt = scan.nextInt();
@@ -79,10 +78,33 @@ public class ControlFlowExercises {
             System.out.println();
         }
 
-
-
     //Convert to letter grades
         //complete by monday
+        boolean decision = true;
+
+        while (decision){
+            System.out.println("Please enter your numerical grade:");
+            int userGradeIn = scan.nextInt();
+            if(userGradeIn > 0 && userGradeIn <= 59){
+                System.out.println("F");
+            }else if (userGradeIn > 59 && userGradeIn <= 69){
+                System.out.println("D");
+            }else if (userGradeIn > 69 && userGradeIn <= 79){
+                System.out.println("C");
+            }else if (userGradeIn > 79 && userGradeIn <= 89){
+                System.out.println("B");
+            }else if (userGradeIn > 89 && userGradeIn <= 100){
+                System.out.println("A");
+            }else {
+                System.out.println("Do you want to enter another grade? (Y/N)");
+
+            }
+
+        }
+
+            }
+
+
 
 
     }
