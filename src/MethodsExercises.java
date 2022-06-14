@@ -30,26 +30,38 @@ public class MethodsExercises {
             return 0;
     }
 
-    public static void getInteger(int min, int max) {
+    public static int getInteger(int min, int max) {
         Scanner scan = new Scanner(System.in);
-        boolean decision = true;
-
-        while (decision) {
-            System.out.println("Enter a number with the range of " + min + " <---> " + max + ":");
-            int value = scan.nextInt();
-            if (value >= min && value <= max) {
-                System.out.println("Congrats! You hit within the range. Your number is: " + value);
-            }else if (value < min || value > max) {
-                System.out.println("Your number is: " + value + " and is not within the set range!");
-            }
-                System.out.println("Do you want to enter another number? (Y/N)");
-                String userDecision = scan.next();
-            if (userDecision.equalsIgnoreCase("n")) {
-                decision = false;
-                System.out.println("Fine then, be that way :(");
-            }
+        System.out.println("Enter a number between " + min + " and " + max);
+        int userInput = scan.nextInt();
+        if (userInput < min || userInput > max) {
+            return getInteger(min, max);
         }
+        System.out.println("Congrats! You hit within the range. Your number is: " + userInput);
+        return userInput;
     }
+//Refactored the following to change from void method to int. ^^^ see above.
+
+//    public static void getInteger(int min, int max) {
+//        Scanner scan = new Scanner(System.in);
+//        boolean decision = true;
+//
+//        while (decision) {
+//            System.out.println("Enter a number with the range of " + min + " <---> " + max + ":");
+//            int value = scan.nextInt();
+//            if (value >= min && value <= max) {
+//                System.out.println("Congrats! You hit within the range. Your number is: " + value);
+//            }else if (value < min || value > max) {
+//                System.out.println("Your number is: " + value + " and is not within the set range!");
+//            }
+//                System.out.println("Do you want to enter another number? (Y/N)");
+//                String userDecision = scan.next();
+//            if (userDecision.equalsIgnoreCase("n")) {
+//                decision = false;
+//                System.out.println("Fine then, be that way :(");
+//            }
+//        }
+//    }
 
     public static void getFactorial() {
         Scanner scan2 = new Scanner(System.in);
@@ -57,7 +69,7 @@ public class MethodsExercises {
         while (decision) {
             System.out.println("Please enter a number between 1 <---> 10: ");
             int userInt = scan2.nextInt();
-            int i =1;
+            int i = 1;
             long factorial = 1;
             if (userInt < 1 || userInt > 10) {
                 System.out.println("Really? That's not between 1 <---> 10!! Try again!");
@@ -79,6 +91,22 @@ public class MethodsExercises {
 
     }
 
+    public static void diceRoll() {
+        Scanner scan3 = new Scanner(System.in);
+        System.out.println("How many sides on your die?");
+        int sideCount = scan3.nextInt();
+        int die1 = (int) (Math.random() * sideCount) + 1;
+        int die2 = (int) (Math.random() * sideCount) + 1;
+
+        System.out.printf("%d is the value of the first roll\n%d is the value of the second roll.", die1, die2);
+    }
+
+
+
+
+
+
+
 
 
     public static void main(String[] args) {
@@ -92,7 +120,7 @@ public class MethodsExercises {
 //
 //        System.out.println(recursion(20, 5 ));
 //        getInteger(15,45);
-        getFactorial();
+//        diceRoll();
 
     }
 }
