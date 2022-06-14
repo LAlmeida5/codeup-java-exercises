@@ -3,53 +3,53 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
     //Loop Basics
-        // a.While
-//        int i = 5;
-//        while (i <= 15) {
-//            System.out.println("i is:" + i);
-//            i++;
-//        }
-//
-//        // b.Do While
-//        int w = 0;
-//        do {
-//            System.out.println(w);
-//            w += 2 ;
-//        }
-//        while (w <= 100);
-//
-//        int y = 100;
-//        do {
-//            System.out.println(y);
-//            y -= 5;
-//        }
-//        while (y >= -10);
-//
-//        long z = 2;
-//        do {
-//            System.out.println(z);
-//            z *= z;
-//        }
-//        while(z <= 1000000);
+         //a.While
+        int i = 5;
+        while (i <= 15) {
+            System.out.println("i is:" + i);
+            i++;
+        }
 
-//        //c.For
-//
-//        for(int a = 100; a >= -10; a = a - 5) {
-//            System.out.println(a);
-//        }
-//
-//        for(long b=2; b <= 1000000; b = b *  b) {
-//            System.out.println(b);
-//        }
-//
-//    //Fizzbuzz
-//
-//        for(int c = 1; c <= 100; c++) {
-//            if (c % 15 == 0) System.out.println("FizzBuzz");
-//            else if (c % 5 == 0) System.out.println("Buzz");
-//            else if (c % 3 == 0) System.out.println("Fizz");
-//            else System.out.println(c);
-//        }
+        //b.Do While
+        int w = 0;
+        do {
+            System.out.println(w);
+            w += 2 ;
+        }
+        while (w <= 100);
+
+        int y = 100;
+        do {
+            System.out.println(y);
+            y -= 5;
+        }
+        while (y >= -10);
+
+        long z = 2;
+        do {
+            System.out.println(z);
+            z *= z;
+        }
+        while(z <= 1000000);
+
+        //c.For
+
+        for(int a = 100; a >= -10; a = a - 5) {
+            System.out.println(a);
+        }
+
+        for(long b=2; b <= 1000000; b = b *  b) {
+            System.out.println(b);
+        }
+
+    //Fizzbuzz
+
+        for(int c = 1; c <= 100; c++) {
+            if (c % 15 == 0) System.out.println("FizzBuzz");
+            else if (c % 5 == 0) System.out.println("Buzz");
+            else if (c % 3 == 0) System.out.println("Fizz");
+            else System.out.println(c);
+        }
 
     //Table of Powers
         Scanner scan = new Scanner(System.in);
@@ -79,13 +79,12 @@ public class ControlFlowExercises {
         }
 
     //Convert to letter grades
-        //complete by monday
         boolean decision = true;
 
         while (decision){
             System.out.println("Please enter your numerical grade:");
             int userGradeIn = scan.nextInt();
-            if(userGradeIn > 0 && userGradeIn <= 59){
+            if(userGradeIn >= 0 && userGradeIn <= 59){
                 System.out.println("F");
             }else if (userGradeIn > 59 && userGradeIn <= 69){
                 System.out.println("D");
