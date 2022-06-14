@@ -51,6 +51,34 @@ public class MethodsExercises {
         }
     }
 
+    public static void getFactorial() {
+        Scanner scan2 = new Scanner(System.in);
+        boolean decision = true;
+        while (decision) {
+            System.out.println("Please enter a number between 1 <---> 10: ");
+            int userInt = scan2.nextInt();
+            int i =1;
+            long factorial = 1;
+            if (userInt < 1 || userInt > 10) {
+                System.out.println("Really? That's not between 1 <---> 10!! Try again!");
+            }else if (userInt > 1 && userInt <10) {
+                while(i <= userInt) {
+                    factorial *= i;
+                    i++;
+                }
+                System.out.println("The factorial of " + userInt + "is: " + factorial);
+            }
+                System.out.println("Would you like to enter another number? (Y/N)");
+                String userDecision = scan2.next();
+            if(userDecision.equalsIgnoreCase("n")){
+                decision = false;
+                System.out.println("That's okay, it was fun while it lasted.");
+            }
+
+        }
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -63,7 +91,8 @@ public class MethodsExercises {
 //
 //
 //        System.out.println(recursion(20, 5 ));
-        getInteger(15,45);
+//        getInteger(15,45);
+        getFactorial();
 
     }
 }
