@@ -1,24 +1,55 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.Scanner;
 
 public class ConsoleAdventureGame {
     //Returns a random number between 1-5.
     public static int randomizer = 1 + (int)(Math.random() * ((5 - 1) + 1));
 
+    public static void traditional(){
+        System.out.println("Now playing...THE HUSTLER: TRADITIONAL");
+        System.out.println("**************************************");
+    }
 
-    public static void startGame() {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("Hey there! You must be our new HUSTLER! What's your name?");
-        String playerName = scan.nextLine();
-
-        System.out.println(playerName + " ,I love that name! It's time to pick a role. Do you want to move TRADITIONAL or EXTRACURRICULAR items?");
-
-        System.out.println("Well then " + playerName + " , it's time to get you loaded up\n and out on your deliveries. Once you reach your quota, return here (we call it \"the shop\")\n to update your inventory or cash out your sales");
-
-
+    public static void extracurricular() {
+        System.out.println("Now playing...THE HUSTLER: EXTRACURRICULAR");
+        System.out.println("******************************************");
     }
 
 
+    public static void startGame() {
+        Scanner scan = new Scanner(System.in);
+        boolean gameChoice = true;
+
+        System.out.println("****************************************************************************\n\n");
+
+        System.out.println("Macho Man: oooooooh yeahhhhh, You must be our new HUSTLER! What's your name?");
+        String playerName = scan.nextLine();
+
+        while (gameChoice) {
+            System.out.println("Macho Man: Awesome " + playerName + " It's time to pick a style of play.");
+            System.out.println("Do you want to move TRADITIONAL or EXTRACURRICULAR items? (TRAD/EXTRA)");
+            String gameSelect = scan.nextLine();
+            if (gameSelect.equalsIgnoreCase("trad")) {
+                System.out.println("Let's load up TRADITIONAL play...\n\n");
+                System.out.println("**************************************");
+                gameChoice = false;
+                traditional();
+            } else if (gameSelect.equalsIgnoreCase("extra")) {
+                System.out.println("Let's load up EXTRACURRICULAR play...\n\n");
+                System.out.println("******************************************");
+                gameChoice = false;
+                extracurricular();
+            } else {
+                System.out.println("Check spelling and try again? (Y/N)");
+                String userChoice = scan.next();
+                if (userChoice.equalsIgnoreCase("n")) {
+                    gameChoice = false;
+                    System.out.println("I guess you didn't really wanna play?");
+                }
+            }
+        }
+    }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -27,7 +58,7 @@ public class ConsoleAdventureGame {
         System.out.println("WELCOME TO THE HUSTLER! \n");
 
         while(decision) {
-            System.out.println("ENTER THE NUMBER FOR THE CORRESPONDING SELECTION: \n--  Play Disgruntled? (1) \n--  How to Play? (2)");
+            System.out.println("ENTER THE NUMBER FOR THE CORRESPONDING SELECTION: \n--  Play HUSTLER? (1) \n--  How to Play? (2)");
             int userSelect = scan.nextInt();
             if (userSelect == 1) {
                 startGame();
@@ -51,6 +82,4 @@ public class ConsoleAdventureGame {
             }
         }
     }
-
-
 }
