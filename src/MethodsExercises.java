@@ -103,12 +103,6 @@ public class MethodsExercises {
 
 
 
-
-
-
-
-
-
     public static void main(String[] args) {
 
 //        System.out.println(multiplication(10,10));
