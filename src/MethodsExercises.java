@@ -105,16 +105,16 @@ public class MethodsExercises {
 
     public static void main(String[] args) {
 
-//        System.out.println(multiplication(10,10));
-//        System.out.println(addition(33,33));
-//        System.out.println(division(30,5));
-//        System.out.println(subtraction(253,135));
-//        System.out.println(modulus(10, 3));
-//
-//
-//        System.out.println(recursion(20, 5 ));
-//        getInteger(15,45);
-//        diceRoll();
+        System.out.println(multiplication(10,10));
+        System.out.println(addition(33,33));
+        System.out.println(division(30,5));
+        System.out.println(subtraction(253,135));
+        System.out.println(modulus(10, 3));
+
+
+        System.out.println(recursion(20, 5 ));
+        getInteger(15,45);
+        diceRoll();
 
     }
 }
