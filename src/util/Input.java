@@ -6,10 +6,8 @@ public class Input {
     private final Scanner scanner = new Scanner(System.in);
 
     public String getString(){
-        System.out.println("Please enter your name: ");
-        String name = scanner.nextLine();
-        System.out.println(name);
-        return name;
+        System.out.println("Please enter a string: ");
+        return scanner.nextLine();
     }
 
     public boolean yesNo(){
@@ -24,33 +22,24 @@ public class Input {
     }
 
     public int getInt(){
-        System.out.println("Enter a number between 1 and 30: ");
-        int userInput = scanner.nextInt();
-        if (userInput < 1 || userInput > 30){
-            return getInt();
-        }
-        System.out.println("You're within the range. Your number is: "+ userInput);
-        return userInput;
+        System.out.println("Enter a number: ");
+        return scanner.nextInt();
     }
 
-    public int getInt(int min, int max){
+
+    public int getInt(int min, int max) {
         System.out.println("Enter a number between " + min + " and " + max);
         int userInput = scanner.nextInt();
         if (userInput < min || userInput > max) {
             return getInt(min, max);
+        } else {
+            return userInput;
         }
-        System.out.println("Congrats! You hit within the range. Your number is: " + userInput);
-        return userInput;
     }
 
     public double getDouble(){
-        System.out.println("Enter a number between 1.0 and 30.0: ");
-        double userInput = scanner.nextDouble();
-        if (userInput < 1.0 || userInput > 30.0){
-            return getDouble();
-        }
-        System.out.println("You're within the range. Your number is: "+ userInput);
-        return userInput;
+        System.out.println("Enter a number: ");
+        return scanner.nextDouble();
     }
 
     public double getDouble(double min, double max){
