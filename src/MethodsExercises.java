@@ -110,8 +110,6 @@ public class MethodsExercises {
         System.out.println(division(30,5));
         System.out.println(subtraction(253,135));
         System.out.println(modulus(10, 3));
-
-
         System.out.println(recursion(20, 5 ));
         getInteger(15,45);
         diceRoll();
