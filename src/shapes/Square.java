@@ -1,7 +1,7 @@
 package shapes;
 
 public class Square extends Rectangle {
-    private int side;
+    protected int side;
 
     public Square(int side) {
         super(side, side);
@@ -9,14 +9,15 @@ public class Square extends Rectangle {
 
     }
 
-
     @Override
     public int getArea() {
-        return side * 2;
+        System.out.println("Area of the square");
+        return side * side;
     }
 
     @Override
     public int getPerimeter() {
+        System.out.println("Perimeter of the square");
         return side * 4;
     }
 }

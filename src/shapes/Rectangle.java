@@ -13,10 +13,12 @@ public class Rectangle {
     }
 
     public int getPerimeter() {
+        System.out.println("Perimeter of the rectangle");
         return (length * 2) + (width * 2);
     }
 
     public int getArea() {
+        System.out.println("Area of the rectangle");
         return length * width;
     }
 
