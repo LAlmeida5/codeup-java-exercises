@@ -6,23 +6,33 @@ import java.util.ArrayList;
 public class Student {
 
     private String name;
-    private int grade;
-    public int sum;
-    public int counter;
-    public int average;
+    private ArrayList<Integer> grades;
+
 
     public String getName() {
         return this.name;
     }
-    public void addGrade(int grade){
-        grades.add(this.grade);
+
+    public ArrayList<Integer> getGrades() {
+        return grades;
     }
 
-    public double getGradeAverage(){
-        average = sum/counter;
-        return average;
+    public void addGrade(int grade) {
+        grades.add(grade);
     }
 
-    ArrayList<Integer> grades = new ArrayList<Integer>(10);
+    public Student(String name) {
+        this.name = name;
+        grades = new ArrayList<>();
+    }
 
+    public double getGradeAverage() {
+        double bucket = 0;
+        for(double grade : grades){
+            bucket += grade;
+        }
+        return bucket / grades.size();
+    }
 }
+
+
