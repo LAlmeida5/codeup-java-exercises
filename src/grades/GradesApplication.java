@@ -45,7 +45,8 @@ public class GradesApplication {
             String userInput = scanner.next();
             if (students.containsKey(userInput)) {
                 System.out.printf("Name: " + students.get(userInput).getName() + "\nGitHub Username: " + userInput +
-                        "\nCurrent GPA: " + students.get(userInput).getGradeAverage());
+                        "\nGrades: " + students.get(userInput).getGrades() +"\nCurrent GPA: " +
+                        students.get(userInput).getGradeAverage());
             }else{
                 System.out.println("Sorry, there does not appear to be a student with that usernmame. Please check spelling and " +
                         "try again.");
