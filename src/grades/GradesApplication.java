@@ -47,15 +47,15 @@ public class GradesApplication {
                 System.out.printf("Name: " + students.get(userInput).getName() + "\nGitHub Username: " + userInput +
                         "\nGrades: " + students.get(userInput).getGrades() +"\nCurrent GPA: " +
                         students.get(userInput).getGradeAverage());
-            }else{
-                System.out.println("Sorry, there does not appear to be a student with that usernmame. Please check spelling and " +
-                        "try again.");
                 System.out.println("\nWould you like to continue? (Y/N)");
                 String userDecision = scanner.next();
                 if (userDecision.equalsIgnoreCase("n")){
                      System.out.println("Now exiting....");
                      decision = false;
                 }
+            }else{
+                System.out.println("Sorry, there does not appear to be a student with that usernmame. Please check spelling and " +
+                        "try again.");
             }
         }
     }
