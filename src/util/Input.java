@@ -6,7 +6,7 @@ public class Input {
     private final Scanner scanner = new Scanner(System.in);
 
     public String getString(){
-        System.out.println("Please enter a string: ");
+//        System.out.println("Please enter a string: ");
         return scanner.nextLine();
     }
 
@@ -21,9 +21,16 @@ public class Input {
         return decision;
     }
 
-    public int getInt(){
+    public int getInt() {
+        int num = 0;
         System.out.println("Enter a number: ");
-        return scanner.nextInt();
+        try {
+            num = Integer.parseInt(String.valueOf(getString()));
+        } catch (Exception e) {
+            System.out.println("Invalid input.");
+            getInt();
+        }
+        return num;
     }
 
 
@@ -38,8 +45,15 @@ public class Input {
     }
 
     public double getDouble(){
-        System.out.println("Enter a number: ");
-        return scanner.nextDouble();
+        double num = 0;
+        System.out.println("Enter a decimal number: ");
+        try{
+            num = Double.parseDouble(getString());
+        } catch (Exception e) {
+            System.out.println("Invalid input.");
+            getDouble();
+        }
+        return num;
     }
 
     public double getDouble(double min, double max){
@@ -53,12 +67,35 @@ public class Input {
 
     }
 
-    public static void main(String[] args) {
-        Input changes = new Input();
-        changes.yesNo();
-        changes.getInt();
-        changes.getInt(10, 25);
-        changes.getDouble();
-        changes.getDouble(1, 15);
+    public int getBinary() {
+        int result = 0;
+        int base = 2;
+        System.out.println("Enter a binary number: ");
+        try{
+            String userInput = scanner.next();
+            result = Integer.valueOf(userInput, base);
+        }catch (Exception e) {
+            System.out.println("Invalid input.");
+            getBinary();
+        }
+        return result;
     }
+
+    public int getHex() {
+        int result =0;
+        int base = 16;
+        System.out.println("Enter a hexidecimal number: ");
+        try{
+            String userInput = scanner.next();
+            result = Integer.valueOf(userInput, base);
+        }catch (Exception e) {
+            System.out.println("Invalid input");
+            result = getHex();
+        }
+        return result;
+    }
+
+
+
+
 }
