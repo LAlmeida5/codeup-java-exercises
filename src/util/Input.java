@@ -47,9 +47,9 @@ public class Input {
     public double getDouble(){
         double num = 0;
         System.out.println("Enter a decimal number: ");
-        try{
+        try {
             num = Double.parseDouble(getString());
-        } catch (Exception e) {
+        }catch (Exception e) {
             System.out.println("Invalid input.");
             getDouble();
         }
@@ -94,8 +94,4 @@ public class Input {
         }
         return result;
     }
-
-
-
-
 }
