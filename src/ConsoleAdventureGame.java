@@ -19,7 +19,7 @@ public class ConsoleAdventureGame {
 
     public static void startGame() {
         Scanner scan = new Scanner(System.in);
-        boolean gameChoice = true;
+        boolean gameChoice = false;
 
         System.out.println("****************************************************************************\n\n");
 
